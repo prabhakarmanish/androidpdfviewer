@@ -1,0 +1,21 @@
+<resources>
+
+
+    <style name="Theme.PdfView.SelectedTheme" parent="@style/Theme.PdfView.Light">
+        <item name="pdfView_showToolbar">true</item>
+        <item name="pdfView_actionBarTint">@color/colorPrimary</item>
+        <item name="pdfView_downloadIconTint">#ffffff</item>
+        <item name="pdfView_enableLoadingForPages">true</item>
+        <item name="pdfView_titleTextStyle">@style/actionBarTitleAppearance</item>
+        <item name="pdfView_progressBar">@drawable/progress_circle</item>
+        <item name="pdfView_page_marginBottom">8dp</item>
+        <item name="pdfView_disableScreenshots">true</item>
+    </style>
+
+    <style name="actionBarTitleAppearance" parent="TextAppearance.AppCompat.Title">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
+</resources>
