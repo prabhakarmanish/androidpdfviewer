@@ -8,24 +8,6 @@
     android:orientation="vertical"
     tools:context=".PdfViewerActivity">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/my_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:elevation="4dp"
-        app:titleTextColor="@color/design_default_color_on_primary">
-
-        <TextView
-            android:id="@+id/tvAppBarTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:clickable="false"
-            android:focusable="false"
-            android:longClickable="false"
-            android:text="@string/pdfView_appName" />
-
-    </androidx.appcompat.widget.Toolbar>
-
     <FrameLayout
         android:id="@+id/mainLayout"
         android:layout_width="match_parent"

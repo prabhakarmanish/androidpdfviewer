@@ -134,19 +134,7 @@ class PdfViewerActivity : AppCompatActivity() {
                 -1
             )
             // Apply attributes
-            binding.myToolbar.visibility = if (showToolbar) VISIBLE else View.GONE
-            binding.myToolbar.navigationIcon = backIcon
-            // Apply text style to the title if defined
-            if (titleTextStyle != -1) {
-                (binding.myToolbar.findViewById(R.id.tvAppBarTitle) as TextView).setTextAppearance(
-                    this,
-                    titleTextStyle
-                )
-            }
-            // Apply color tint to the toolbar and download icon if defined
-            if (actionBarTint != -1) {
-                binding.myToolbar.setBackgroundColor(actionBarTint)
-            }
+
 
         } finally {
             typedArray.recycle()
@@ -158,12 +146,6 @@ class PdfViewerActivity : AppCompatActivity() {
         binding = ActivityPdfViewerBinding.inflate(layoutInflater)
         setContentView(binding.root)
         configureToolbar()
-        setUpToolbar(
-            intent.extras!!.getString(
-                FILE_TITLE,
-                "PDF",
-            )
-        )
 
         // Configure progress bar and background
         val typedArray1 = theme.obtainStyledAttributes(R.styleable.PdfRendererView)
@@ -297,15 +279,6 @@ class PdfViewerActivity : AppCompatActivity() {
         }
     }
 
-    private fun setUpToolbar(toolbarTitle: String) {
-        setSupportActionBar(binding.myToolbar)
-        supportActionBar?.apply {
-            setDisplayHomeAsUpEnabled(true)
-            setDisplayShowHomeEnabled(true)
-            (binding.myToolbar.findViewById(R.id.tvAppBarTitle) as TextView).text = toolbarTitle
-            setDisplayShowTitleEnabled(false)
-        }
-    }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         val inflater: MenuInflater = menuInflater
